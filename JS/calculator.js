@@ -69,7 +69,7 @@ decimal.addEventListener("click", function () {
 }
 );
 
-function add(x, y) {
+function add(x,y){
     return x + y;
 }
 function subtract(x, y) {
@@ -81,6 +81,7 @@ function multiply(x, y) {
 function divide(x, y) {
     return x / y;
 }
+
 function operate(operator, x, y) {
     if (operator == "+") {
         return add(x, y);
@@ -94,7 +95,7 @@ function operate(operator, x, y) {
     else if (operator == "/") {
         return divide(x, y);
     }
-}
+} 
 function calculate(x, y, operator) {
     return operate(operator, x, y);
 }
