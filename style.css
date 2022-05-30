@@ -41,5 +41,9 @@
     font-size: 40px;
 }
 .row5 > button:hover{
+    background-color: #4A7C59;
+}
+
+#clear:hover{
     background-color: #DB222A;
 }
