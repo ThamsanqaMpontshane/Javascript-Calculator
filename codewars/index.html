@@ -7,16 +7,60 @@
     <title>Document</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body>
-    <main>
-      <form id="studentForm">
-        <input type="text" placeholder="Student name" name="name" required />
-        <input type="number" placeholder="Student age" name="age" required />
-        <input type="number" placeholder="Student roll" name="roll" required />
-        <button>Add student</button>
-      </form>
-      <div class="students"></div>
-    </main>
-    <script src="/index.js"></script>
+  <body>    
+    <style>
+      #myChart{
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <body>
+    
+  <div>
+    <canvas id="myChart" style="width:100%;max-width:600px;margin: auto auto;"></canvas>
+    <h4 style="width:100%;max-width:600px;text-align: center;margin: 0 auto;">Waiting Period</h4>
+  </div>
+   
+    
+    
+    <script>
+    var xValues = ["0 - 3", "4 - 6","7 -9"];
+    var yValues = [5,2,2];
+    var barColors = ["red","green","blue"];
+    
+    new Chart("myChart", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        title: {
+          display: true,
+          text: "BURIALS BY FLY HIGH",
+          fontSize: 20
+        },
+        scales: {
+          yAxes: [{
+            legend: {display: true},
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Number of Beneficiaries"
+            }
+          }],
+        }
+      }
+    });
+
+    </script>
+    
   </body>
 </html>
